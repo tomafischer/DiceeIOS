@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var dice2ImgView: UIImageView!
     
 
+    var randomDiceIndex1 : Int = 0
+    var randomDiceIndex2 : Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +24,11 @@ class ViewController: UIViewController {
     }
 
     @IBAction func rollBtnTapped(_ sender: Any) {
+        print("clicked")
+        randomDiceIndex1 = Int.random(in: 0..<6)
+        randomDiceIndex2 = Int.random(in: 0...5)
+        print("\(randomDiceIndex1) : \(randomDiceIndex2)")
+        
     }
     
 }
